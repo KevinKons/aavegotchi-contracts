@@ -199,7 +199,7 @@ contract AavegotchiFacet is Modifiers {
     ) external {
         address sender = LibMeta.msgSender();
         internalTransferFrom(sender, _from, _to, _tokenId);
-        // LibERC721.checkOnERC721Received(sender, _from, _to, _tokenId, "");
+        LibERC721.checkOnERC721Received(sender, _from, _to, _tokenId, "");
     }
 
     /// @notice Transfer ownership of an NFT -- THE CALLER IS RESPONSIBLE
