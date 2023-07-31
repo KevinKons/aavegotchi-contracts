@@ -32,9 +32,9 @@ export default async function main() {
   console.log(`Wating for tx to be validated, tx hash: ${tx.hash}`)
   await tx.wait()
 
-  // tx = await daoFacetPolygonSide.addLayerZeroBridgeAddress(bridgePolygonSide.address, txParams)
-  // console.log(`Wating for tx to be validated, tx hash: ${tx.hash}`)
-  // await tx.wait()
+  tx = await daoFacetPolygonSide.addLayerZeroBridgeAddress(bridgePolygonSide.address, txParams)
+  console.log(`Wating for tx to be validated, tx hash: ${tx.hash}`)
+  await tx.wait()
 
   console.log("Bridge setted on Polygon.");
 }
